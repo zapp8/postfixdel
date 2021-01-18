@@ -1,7 +1,8 @@
 #!/usr/bin/perl
  
 $REGEXP = shift || die "no email-adress given (regexp-style, e.g. bl.*\@yahoo.com)!";
- 
+#modify the above variable as per your needs
+
 @data = qx</usr/sbin/postqueue -p>;
 for (@data) {
   if (/^(\w+)(\*|\!)?\s/) {
