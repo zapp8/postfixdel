@@ -16,7 +16,8 @@ for (@data) {
 }
  
 open(POSTSUPER,"|postsuper -d -") || die "couldn't open postsuper" ;
- 
+# delete queue using postsuper
+
 foreach (keys %Q) {
   print POSTSUPER "$_\n";
 };
